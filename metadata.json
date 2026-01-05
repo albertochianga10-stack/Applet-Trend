@@ -1,0 +1,7 @@
+{
+  "name": "Applemar Trend",
+  "description": "Uma plataforma de análise de mercado em tempo real para identificar produtos e tendências de vendas em Angola.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
