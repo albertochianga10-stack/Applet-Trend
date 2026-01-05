@@ -7,6 +7,7 @@
     <base href="/" />
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#f59e0b">
+    <link rel="apple-touch-icon" href="https://picsum.photos/seed/applemar/192/192">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -25,17 +26,19 @@
           z-index: 9999;
           transition: opacity 0.5s ease-out;
         }
+        .animate-spin { animation: spin 1s linear infinite; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
     </style>
 <script type="importmap">
 {
   "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
-    "vite": "https://esm.sh/vite@^7.3.0",
     "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
     "recharts": "https://esm.sh/recharts@^3.6.0",
+    "vite": "https://esm.sh/vite@^7.3.0",
     "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
@@ -47,7 +50,7 @@
         <p class="mt-4 text-slate-500 font-medium animate-pulse">Trend Angola</p>
     </div>
     <div id="root"></div>
-    <!-- No Vite production, o caminho será injetado ou referenciado corretamente via /index.tsx -->
+    <!-- No processo de build do Vite, este src será resolvido para o bundle gerado -->
     <script type="module" src="/index.tsx"></script>
     <script>
       window.addEventListener('load', () => {
